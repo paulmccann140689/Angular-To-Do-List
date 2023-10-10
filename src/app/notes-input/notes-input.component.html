@@ -1,0 +1,14 @@
+<form class="notes-container">
+    <div mat-dialog-content>
+        <mat-form-field class="example-full-width">
+            <mat-label>Leave a Note</mat-label>
+            <textarea matInput placeholder="Enter note here" style="margin-top: 24px;" [(ngModel)]="data.note" name="test"></textarea>
+        </mat-form-field>
+    </div>
+</form>
+<div>
+    <mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Clear</button>
+        <button mat-button [mat-dialog-close]="data.note" cdkFocusInitial>Save</button>
+    </mat-dialog-actions>
+</div>    

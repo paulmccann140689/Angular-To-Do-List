@@ -1,0 +1,41 @@
+<div class="container">
+    <div>
+        <input class="todo-input" placeholder="Enter task here" type="text" name="text" [(ngModel)]="todoItem">
+        <button mat-raised-button type="submit" name="add-button" (click)="addToDo()">Add Task</button>
+    </div>
+
+    <!--To Do List-->
+    <div class="todo-List">
+        <h4 class="add-heading">To Do List</h4>
+        <div class="todo-single-item" *ngFor="let todo of todoList; let index=index;">
+            <p class="todo-item">{{ todo.task }}
+                <button mat-raised-button type="submit" name="remove-button" (click)="completedTodo(index)">Complete Task</button>
+                <app-notes [index]="index" [tasksLen]="todoList.length"></app-notes>
+            </p>
+        </div>
+        <br>
+        <!--Clear To Do List-->
+        <div class="clear-list">
+            <p class="clear-todo-list">{{ todoList }}
+                <button mat-raised-button type="submit" name="clear-list-button" (click)="clearTodoList()">Clear To Do List</button>
+            </p>
+        </div>
+    </div>
+    <br>
+    <!--Completed List-->
+    <div class="completed-list">
+        <h4 class="clear-heading">Completed Tasks</h4>
+        <div class="completed-single-item" *ngFor="let todo of completedList; let index=index;">
+            <p class="unfinished-item"> {{ todo.task }}
+                <button mat-raised-button type="submit" name="unfinished-button" (click)="unfinishedTodo(index)">Re-Add-Task</button>
+            </p>
+        </div>
+        <br>
+        <!--Clear Completed List-->
+        <div class="clear-list-completed">
+            <p class="clear-completed-list">{{ completedList }}
+                <button mat-raised-button type="submit" name="clear-completed-list-button" (click)="clearCompletedList()">Clear Completed List</button>
+            </p>
+        </div>
+    </div>
+</div>

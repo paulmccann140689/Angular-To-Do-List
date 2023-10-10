@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+.appOuter{
+    display: grid;
+    grid-template-columns: [firstColumn] 500px [secondColumn] auto [thirdColumn] 500px;
+    grid-template-rows: [firstRow] 95px [secondRow] auto [thirdRow] 95px [lastLine];
+}
+
+
+.container{
+    margin-top: 3px;
+}
+
+
+.appTodo{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    border: solid #1077ec;
+    border-width: 2px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.todo-input{
+    height: 33px;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+
+.appDate{
+    display: flex;
+    max-height: 95px;
+    border-radius: #c9c9c9;
+    border-bottom-width: 2px;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.date > h4{
+    font-weight: 500;
+    color: #00395d;
+}
+
+.empty5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvatica Neue", sans-serif; }
